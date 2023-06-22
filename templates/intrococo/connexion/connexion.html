@@ -1,5 +1,13 @@
 {% extends 'intrococo/base.html' %}
 
 {% block content %}
-
+    <form method='POST'>
+        {% csrf_token %}
+        {{ error }}
+        <label for="">UserName</label>
+        <input type="text" name='username'>
+        <label for="">Password</label>
+        <input type="password" name='password'>
+        <button type="submit">Connexion</button>
+    </form>
 {% endblock content %}
